@@ -8,6 +8,7 @@
 }
 html {
     -webkit-appearance: none ;
+    appearance: none;
     -webkit-text-size-adjust : 100% ;
     scroll-behavior: smooth;
     scroll-padding-top: 50px;
@@ -222,21 +223,24 @@ img {
 }
 .about__subText {
     text-align: center;
+    margin-top: 50px;
 }
 .about__lists {
     display: flex;
     flex-direction:column;
     align-items: center;
 }
-.about__listsWrapper {
 
-}
 .about__list{
-    border: 2px dotted black;  /* 点線 */
+    border-bottom: 2px dotted #333;  /* 点線 */
     text-align: left;
     display: flex;
     justify-content: flex-start;
-    padding-left:1em ;
+    padding:1em,1em ;
+
+    @media screen and (max-width: 355px){
+        font-size: 12px;
+    }
 }
 .about__image {
     width: calc(400 / 960 *100%);
@@ -284,6 +288,9 @@ img {
 }
 .service-item__text {
     padding-top: 22px;
+}
+.service-item__desc {
+    text-align: left;
 }
 .service-item__image {
     width: 150px;
@@ -336,7 +343,17 @@ img {
     padding-block: 50px 70px;
 }
 .thoughts {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
     padding-block: 50px 70px;
+} 
+.thoughts__section-desc {
+    max-width: 767px;
+    display: flex;
+    padding: clamp(8px,5vw,40px);
+    align-items: center;
+    text-align: left;
 }
 .contact {
     padding-block: 50px 60px;
@@ -389,7 +406,7 @@ img {
 }
 .footer__coopyright {
     color: #fff;
-    font-size: 30px;
+    font-size: clamp(16px, 4vw, 32px);
     margin-top: 8px;
 }
 .sns {
