@@ -64,7 +64,7 @@ img {
     font-size: 20px;
 
     @media screen  and (max-width: 767px){
-        font-size: 13px;
+        font-size: 12px;
     }
 }
 .section-bg {
@@ -83,7 +83,7 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 50px;
+    height: inherit;
 }
 .header-nav {
     height: inherit;
@@ -110,7 +110,7 @@ img {
 
 .header__nav {
     height: inherit;
-    @media screen  and (max-width:800px){
+    @media screen  and (max-width:900px){
         display: none;
     }
 }
@@ -186,10 +186,10 @@ img {
         transform: translate(-50%,-50%);
         font-size: 25px;
         text-align:left;
-        line-height: 1;
     }
     @media screen and (max-width:560px) {
         font-size: 15px;
+        line-height: 1.7;
     }
     @media screen and (max-width:330px) {
         font-size: 12px;
@@ -220,10 +220,14 @@ img {
 
 .about__text {
     flex: 1;
+    @media screen and (max-width:330px) {
+        font-size: 12px;
+    }
 }
 .about__subText {
     text-align: center;
     margin-top: 50px;
+    font-size: 20px;
 }
 .about__lists {
     display: flex;
@@ -302,7 +306,12 @@ img {
     text-align: center;
 }
 .service-item__desc {
+    margin-top: 16px;
     text-align: left;
+
+    @media screen  and (max-width: 767px){
+        font-size: 12px;
+    }
 }
 .service-item__image {
     width: 150px;
@@ -362,12 +371,16 @@ img {
     justify-content: center;
     padding-block: 50px 70px;
 } 
-.thoughts__section-desc {
+.thought__section-desc {
     max-width: 767px;
     display: flex;
     padding: clamp(8px,5vw,40px);
     align-items: center;
     text-align: left;
+    @media screen and (max-width: 355px){
+        font-size: 12px;
+    }
+
 }
 .contact {
     padding-block: 50px 60px;
